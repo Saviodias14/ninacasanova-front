@@ -1,11 +1,14 @@
 import styled from "styled-components"
 import { FaBars } from "react-icons/fa"
+import { useContext } from "react"
+import SideBarContext from "../../context/sidebar"
 
 
 export default function Header() {
+    const { showSideBar, setShowSideBar } = useContext(SideBarContext)
     return (
         <Container>
-            <FaBars size={25} style={{background: 'grey', color: 'white', marginLeft: '15px', cursor: 'pointer'}} />
+            <FaBars onClick={() => { showSideBar ? setShowSideBar(false) : setShowSideBar(true) }} size={25} style={{ background: 'grey', color: 'white', marginLeft: '15px', cursor: 'pointer' }} />
             <h1>Chá de casa nova da Nina</h1>
         </Container>
     )
@@ -13,6 +16,7 @@ export default function Header() {
 
 const Container = styled.div`
 position:fixed;
+z-index:100;
 left:auto;
 right:auto;
 width:600px;

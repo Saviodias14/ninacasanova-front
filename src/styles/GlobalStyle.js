@@ -10,6 +10,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-attachment: fixed;
 }
 button{
     min-height:40px;
