@@ -3,7 +3,7 @@ import { mainlyColor } from "../constants/colors"
 
 const GlobalStyle = createGlobalStyle`
 body{
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('https://img.freepik.com/vetores-gratis/quadro-de-folhas-de-camelia-retangulo-em-branco_53876-100809.jpg'); 
     background-size: cover; 
     background-position: center; 
