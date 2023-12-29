@@ -60,7 +60,8 @@ export default function GiftList() {
 const Gift = styled.div`
 flex:1;
 background-color:white;
-width: 200px;
+min-width: 250px;
+max-width: 250px;
 border-radius:20px;
 margin: 50px;
 padding: 20px;
@@ -94,5 +95,5 @@ div{
 const GiftContainer = styled.div`
 display: flex;
 flex-wrap:wrap;
-justify-content:space-between;
+justify-content:center;
 `

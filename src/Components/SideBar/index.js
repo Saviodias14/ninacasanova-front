@@ -34,7 +34,7 @@ top:0;
 z-index:50;
 background-color: rgba(0, 0, 0, 0.6);
 height: 100vh;
-width: 600px;
+width: 900px;
 margin: 0 auto;
 @media screen and (max-width: 600px) {
     width:100%;

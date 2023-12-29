@@ -101,7 +101,7 @@ flex-direction:column;
 border-radius:5vh;
 border: 1px black solid;
 background-color:white;
-height:${props => (props.container === 3 ? '80vh' : '70vh')};
+height:${props => (props.container === 3 ? '80vh' : '50vh')};
 width:530px;
 position: fixed;
 top: 50%;

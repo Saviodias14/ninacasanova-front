@@ -5,7 +5,7 @@ export const MainlyBackground = styled.div`
 background-color: rgba(255, 255, 255, 0.4);
 flex:1;
 min-height:100vh;
-width: 600px;
+width: 700px;
 min-width:100%;
 margin: 0 auto;
 padding-top:50px;
@@ -22,6 +22,7 @@ h2{
 p{
     margin: 0 50px 30px 50px;
     text-align:justify;
+    font-size:20px;
 }
 a{
     cursor: pointer ;

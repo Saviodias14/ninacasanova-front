@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useState } from "react"
 import styled from "styled-components"
 
@@ -5,10 +6,25 @@ import styled from "styled-components"
 export default function MessagePopUp({ ocult, setOcult }) {
     const [name, setName] = useState()
     const [message, setMessage] = useState()
+
+    const handleForm = async (e) => {
+        e.preventDefault()
+
+        try {
+            const body = { name, message }
+            await axios.post(`${process.env.REACT_APP_URL_API}/messages`, body)
+            ocult ? setOcult(false) : setOcult(true)
+            setMessage('')
+            setName('')
+            alert('Mensagem enviada. Obrigada!')
+        } catch (err) {
+            alert(err.response.data.message)
+        }
+    }
     return (
         <Container ocult={ocult}>
             <Sair onClick={() => setOcult(true)}>Voltar</Sair>
-            <form>
+            <form onSubmit={handleForm}>
                 <label>Nome:</label>
                 <input placeholder="Digite seu nome" type="text" value={name} onChange={(e) => setName(e.target.value)} required={true} />
 
